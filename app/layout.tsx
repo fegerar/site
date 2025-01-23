@@ -7,15 +7,15 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://leerob.com'),
+  metadataBase: new URL('https://federicogerardi.ovh'),
   alternates: {
     canonical: '/',
   },
   title: {
-    default: 'Lee Robinson',
-    template: '%s | Lee Robinson',
+    default: 'Federico Gerardi',
+    template: '%s | Federico Gerardi',
   },
-  description: 'Frontend developer, optimist, community builder.',
+  description: 'Computer Scientist, Data Scientist, Systems Engineer',
 };
 
 export default function RootLayout({
