@@ -1,0 +1,42 @@
+import { AnimatedName } from '@/app/n/animated-name.tsx';
+import Image from "next/image";
+
+export const metadata = {
+    title: 'Studies',
+    alternates: {
+        canonical: '/n/studies',
+    },
+};
+
+export function Small({ children }) {
+    return (
+        <small className="flex text-sm text-gray-500 -mt-3 mb-3">{children}</small>
+    );
+}
+
+# Studies
+
+<AnimatedName />
+
+I'm a student at [Sapienza University of Rome](https://www.uniroma1.it), and I'm studying Computer Science. Here's a summary of my studies so far.
+
+## <Image src={"/uniroma1.png"} alt="emoji" className="relative bottom-0.5 inline-block" width={40} height={40} /> Master's Degree in Computer Science
+
+<Small>Sapienza University of Rome, Sep 2024 - Now</Small>
+
+I'm focusing on Data Science, Artificial Intelligence and Computer Systems.
+
+## <Image src={"/uniroma1.png"} alt="emoji" className="relative bottom-0.5 inline-block" width={40} height={40} /> Bachelor's Degree in Computer Engineering
+
+<Small>Sapienza University of Rome, Sep 2021 - Oct 2024</Small>
+
+I learned the basics of computer science, mathematics, physics, control systems, and electronics. My thesis was about [Custom Wireless Joystick Development with Arduino and Linux Integration](/bachelor_thesis.pdf).
+
+ 
+## <Image src={"/fermi.png"} alt="emoji" className="relative bottom-0.5 inline-block" width={40} height={40} /> High School Diploma cum Laude
+
+<Small>E. Fermi Technical High School, Sep 2016 - July 2021</Small>
+
+I learned the basics of programming, networking, and cybersecurity. During my time there, I partecipated at:
+- **CanSat Competition** 2019, where we built a satellite that was launched in the stratosphere, and we arrived 2nd in the national competition.
+- **CyberChallenge** 2020, where we had to solve a series of cybersecurity challenges, and we arrived 6th in the national competition.

@@ -36,3 +36,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 package-lock.json
+.idea/modules.xml
+.idea/site.iml
+.idea/vcs.xml
+.idea/workspace.xml
