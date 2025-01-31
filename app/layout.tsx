@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { ViewTransitions } from 'next-view-transitions';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Github, Linkedin, TwitterX } from 'react-bootstrap-icons';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -44,10 +45,9 @@ export default function RootLayout({
 
 function Footer() {
   const links = [
-    { name: '@leerob', url: 'https://x.com/leeerob' },
-    { name: 'youtube', url: 'https://www.youtube.com/@leerob' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/leeerob' },
-    { name: 'github', url: 'https://github.com/leerob' },
+    { icon: <TwitterX size={25} />, url: 'https://x.com/f3gerar' },
+    { icon: <Linkedin size={25} />, url: 'https://www.linkedin.com/in/federico-gerardi-81407a1a1/' },
+    { icon: <Github size={25} />, url: 'https://github.com/fegerar' },
   ];
 
   return (
@@ -55,13 +55,13 @@ function Footer() {
       <div className="flex justify-center space-x-4 tracking-tight">
         {links.map((link) => (
           <a
-            key={link.name}
+            key={link.url}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
           >
-            {link.name}
+            {link.icon}
           </a>
         ))}
       </div>
