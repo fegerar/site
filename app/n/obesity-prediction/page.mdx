@@ -1,4 +1,5 @@
 import { AnimatedName } from '../animated-name.tsx';
+import { LinearRegression } from './linear-regression.tsx';
 
 export const metadata = {
   title: 'Intro to Machine Learning: Obesity Prediction',
@@ -11,3 +12,29 @@ export const metadata = {
 # Intro to Machine Learning: Obesity Prediction
 
 <AnimatedName />
+
+In this post we will explore how to predict obesity using machine learning. 
+We will use the [Obesity Dataset](https://www.kaggle.com/datasets/fatemehmehrparvar/obesity-levels) to try different machine learning models and see which one performs best.
+
+## The Dataset
+
+We have 17 features and 2111 samples. For more informations about the dataset, you can check the [Kaggle page](https://www.kaggle.com/datasets/fatemehmehrparvar/obesity-levels).
+
+## The Models
+
+### Linear Regression
+
+[Linear regression](https://en.wikipedia.org/wiki/Linear_regression) is a linear approach to modeling the relationship between a scalar response and one or more explanatory variables. The case of one explanatory variable is called simple linear regression. 
+
+<LinearRegression />
+
+With linear regression we aim to find the best line that fits the data. We can then use this line to predict new values.
+
+Trying to predict the weight of a person based on the other features, we get the following results:
+
+| Metric                  | Value |
+| --- | --- |
+| Mean Absolute Error     | 3.95  |
+| Mean Squared Error      | 26.01 |
+| Root Mean Squared Error | 5.10  |
+
