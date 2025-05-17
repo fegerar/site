@@ -23,13 +23,7 @@ const treeOptions: Record<string, TreeNode> = {
 		label: 'Age ≥ 40?',
 		left: { id: 'left', label: 'Young' },
 		right: { id: 'right', label: 'Old' },
-	},
-	Cholesterol: {
-		id: 'root',
-		label: 'Cholesterol > 200?',
-		left: { id: 'left', label: 'Normal' },
-		right: { id: 'right', label: 'High' },
-	},
+	}
 };
 
 const positions = {
@@ -112,7 +106,6 @@ export function DecisionTree() {
 						>
 							<option value="BMI">BMI</option>
 							<option value="Age">Age</option>
-							<option value="Cholesterol">Cholesterol</option>
 						</select>
 					</div>
 					<p className="mt-2">

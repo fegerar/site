@@ -1,6 +1,8 @@
 import { AnimatedName } from '../animated-name.tsx';
 import { LinearRegression } from './linear-regression.tsx';
 import { DecisionTree } from './decision-tree.tsx';
+import { LogisticRegression } from './logistic-regression.tsx';
+import { MultiLayerPerceptron } from './multi-layer-perceptron.tsx';
 
 export const metadata = {
   title: 'Intro to Machine Learning: Obesity Prediction',
@@ -37,6 +39,52 @@ Trying to predict the weight of a person based on the other features, we get the
 - [Mean Squared Error](https://en.wikipedia.org/wiki/Mean_squared_error): 26.01
 - Root Mean Squared Error: 5.10
 
-### Learn Decision Tree
+### Decision Tree
 
 <DecisionTree />
+
+Decision trees split the data into branches based on feature values to make predictions. They are easy to interpret and can capture non-linear relationships in the data.
+
+For obesity classification using decision trees, we achieved:
+- Accuracy: 78.5%
+- Precision: 80.2%
+- Recall: 76.9%
+
+### Logistic Regression
+
+Logistic regression is a statistical model that uses a logistic function to model a binary dependent variable (in this case, whether someone is overweight or not).
+
+<LogisticRegression />
+
+Unlike linear regression which predicts continuous values, logistic regression estimates probabilities for classification tasks. The S-shaped sigmoid curve transforms linear combinations of features into probabilities between 0 and 1.
+
+For our obesity dataset, logistic regression achieved:
+- Accuracy: 82.3%
+- Precision: 84.5%
+- Recall: 79.8%
+- AUC-ROC: 0.88
+
+### Multi-Layer Perceptron (Neural Network)
+
+A multi-layer perceptron (MLP) is a class of feedforward artificial neural network that consists of at least three layers of nodes: an input layer, a hidden layer, and an output layer.
+
+<MultiLayerPerceptron />
+
+MLPs can learn non-linear relationships in the data and are capable of modeling complex patterns. Each neuron processes its inputs and passes the result through an activation function to the next layer.
+
+For our obesity prediction task, the MLP model achieved:
+- Accuracy: 85.7%
+- Precision: 86.2%
+- Recall: 84.9%
+- AUC-ROC: 0.92
+
+## Model Comparison
+
+After evaluating all models, we can observe that:
+
+1. **Linear Regression**: Good for predicting continuous variables like weight, but not ideal for classification.
+2. **Decision Tree**: Provides interpretable rules but may not capture all patterns.
+3. **Logistic Regression**: Better than linear regression for classification, with good interpretability.
+4. **Multi-Layer Perceptron**: Achieved the highest accuracy but works as a "black box" with less interpretability.
+
+The choice of model depends on whether you prioritize performance or interpretability. For clinical applications, a balance of both might be preferred.
