@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import type { ReactElement } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Simulated network architecture for MLP visualization
@@ -69,7 +70,7 @@ export function MultiLayerPerceptron() {
 
   // Render connections between layers
   const renderConnections = () => {
-    const connections: JSX.Element[] = [];
+    const connections: ReactElement[] = [];
     
     for (let l = 0; l < layers.length - 1; l++) {
       const currentLayer = layers[l];
@@ -109,7 +110,7 @@ export function MultiLayerPerceptron() {
 
   // Render neurons for each layer
   const renderNeurons = () => {
-    const neurons: JSX.Element[] = [];
+    const neurons: ReactElement[] = [];
     
     layers.forEach((layer, layerIndex) => {
       const currentActivations = activations[currentStep][layerIndex];
