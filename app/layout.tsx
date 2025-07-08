@@ -5,6 +5,7 @@ import { ViewTransitions } from 'next-view-transitions';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Github, Linkedin, TwitterX } from 'react-bootstrap-icons';
+import { ThemeProvider } from './components/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,16 +28,18 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html lang="en" className={`${inter.className}`}>
+      <html lang="en" className={`${inter.className}`} suppressHydrationWarning>
         <body className="antialiased tracking-tight">
-          <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 bg-white text-gray-900">
-            <main className="max-w-[60ch] mx-auto w-full space-y-6">
-              {children}
-            </main>
-            <Footer />
-            <Analytics />
-            <SpeedInsights />
-          </div>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 bg-white dark:bg-zinc-950 text-gray-900 dark:text-zinc-200">
+              <main className="max-w-[60ch] mx-auto w-full space-y-6">
+                {children}
+              </main>
+              <Footer />
+              <Analytics />
+              <SpeedInsights />
+            </div>
+          </ThemeProvider>
         </body>
       </html>
     </ViewTransitions>
@@ -59,7 +62,7 @@ function Footer() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
+            className="text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-colors duration-200"
           >
             {link.icon}
           </a>

@@ -1,30 +1,88 @@
 import { NameTransition } from "./name";
+import { ProjectCard, ProjectGrid } from '@/app/components/project-card';
 
 <NameTransition />
 
-I'm a MSc Computer Science [student](/studies) at Sapienza University of Rome. I [work](/work) at DigiLab Sapienza, where I develop websites, VR experiences and AI models.
+I'm a MSc Computer Science [student](/studies) at Sapienza University of Rome. I [work](/work) at DigiLab Sapienza, where I develop websites, VR experiences and AI models.
 
-{/* ## Writing
+## Research Papers
 
-- [On Developer Experience](/n/dx)
-- [On Developer Marketing](/n/developer-marketing)
-- [On Developer Relations](/n/devrel)
-- [On Developer Products](/n/devtools)
-- [On Community Moderation](/n/moderation)
-- [Rust is Eating JavaScript](/n/rust)
-- [Product Engineers](/n/product-engineers)
-- [My Stack](/n/stack)
-- [Understanding AI](/n/ai) */}
+<ProjectGrid>
+  <ProjectCard 
+    title="Language Modeling for Epigraphs" 
+    description="A BERT model for EDR's Latin Epigraphs text completion"
+    link="/path/to/paper.pdf"
+    image="/sapienza.png"
+    tags={["IEEE CyberHumanities 2025", "Natural Language Processing", "Latin Epigraphy"]}
+  />
+</ProjectGrid>
 
-## Projects
+## Computer Vision
 
-### Computer Vision
-- [iFAB: FabLab Robot Assistant](https://www.mondodigitale.org/notizie/la-fabbricazione-digitale-tutti)
-- [SOFA: Step On Foot Analyzer](https://sofa.federicogerardi.ovh)
+<ProjectGrid>
+  <ProjectCard 
+    title="Seaspray" 
+    description="Transformers applied to CAPTCHA-cloaked phishing websites"
+    link="/seaspray.pdf"
+    image="/microsoft.png"
+    tags={["Computer Vision", "Phishing", "CyberSecurity"]}
+    external={true}
+  />
+  <ProjectCard 
+    title="iFAB: FabLab Robot Assistant" 
+    description="A robot assistant to help in FabLab environments, developed in collaboration with Microsoft Italy."
+    link="https://www.mondodigitale.org/notizie/la-fabbricazione-digitale-tutti"
+    image="/microsoft.png"
+    tags={["Computer Vision", "Robotics", "Microsoft"]}
+    external={true}
+  />
+  <ProjectCard 
+    title="SOFA: Step On Foot Analyzer" 
+    description="A system to analyze the pressure distribution on the foot during walking, providing insights for medical diagnostics."
+    link="https://sofa.federicogerardi.ovh"
+    image="/archeo3d.png"
+    tags={["Computer Vision", "Soccer", "Referee"]}
+    external={true}
+  />
+</ProjectGrid>
 
-### Data Science
-- [Mental Health Model to Prevent Depression](/fds_report.pdf)
-- [Intro to Machine Learning: Obesity Prediction](/n/obesity-prediction)
+## Natural Language Processing
+<ProjectGrid>
+  <ProjectCard 
+    title="Augustus" 
+    description="Enhancing Epigraphic Language Models with POS Tagging, Material Classification, and Generative Capabilities"
+    link="/augustus.pdf"
+    tags={["Natural Language Processing", "Latin Epigraphy", "BERT"]}
+  />
+</ProjectGrid>
 
-### Systems
-- [Custom Wireless Joystick Development with Arduino and Linux Integration](/bachelor_thesis.pdf)
+## Data Science
+
+<ProjectGrid>
+  <ProjectCard 
+    title="Mental Health Model" 
+    description="A predictive model to identify early signs of depression using machine learning algorithms."
+    link="/fds_report.pdf"
+    image="/sapienza.png"
+    tags={["Data Science", "ML", "Healthcare"]}
+  />
+  <ProjectCard 
+    title="Obesity Prediction" 
+    description="An introduction to machine learning through the development of various models to predict obesity."
+    link="/n/obesity-prediction"
+    image="/sapienza.png"
+    tags={["Data Science", "ML", "Tutorial"]}
+  />
+</ProjectGrid>
+
+## Systems
+
+<ProjectGrid>
+  <ProjectCard 
+    title="Custom Wireless Joystick" 
+    description="Development of a wireless joystick with Arduino and Linux integration for my bachelor's thesis."
+    link="/bachelor_thesis.pdf"
+    image="/fermi.png"
+    tags={["Systems", "Arduino", "Linux", "IoT"]}
+  />
+</ProjectGrid>
